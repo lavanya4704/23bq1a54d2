@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>WebSocket Test</h2>
+
+<script>
+const socket = new WebSocket("ws://localhost:3000?userId=1");
+
+socket.onmessage = (msg) => {
+  console.log("LIVE:", JSON.parse(msg.data));
+};
+</script>
+
+</body>
+</html>
